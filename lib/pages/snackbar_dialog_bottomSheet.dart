@@ -1,8 +1,8 @@
 part of pages;
 
 
-class Snackbar_dialog extends StatelessWidget {
-  const Snackbar_dialog({Key? key}) : super(key: key);
+class Snackbar_dialog_bottomSheet extends StatelessWidget {
+  const Snackbar_dialog_bottomSheet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +23,9 @@ class Snackbar_dialog extends StatelessWidget {
 
               child: Text("Show SnackBar"),
             ),
+
+
+
 
             ElevatedButton(
                 onPressed: (){
@@ -55,7 +58,45 @@ class Snackbar_dialog extends StatelessWidget {
                     barrierDismissible: false
                   );
                 },
-                child: Text("Show Dialog"))
+                child: Text("Show Dialog")
+            ),
+
+
+
+            ElevatedButton(
+                onPressed: (){
+                  Get.bottomSheet(
+                    Container(
+                      child: Wrap(
+                        children: [
+                          ListTile(
+                            leading: Icon(Icons.wb_sunny_outlined),
+                            title: Text("Light Theme"),
+                            onTap: ()=>{
+                              Get.changeTheme(ThemeData.light())
+                            },
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.wb_sunny),
+                            title: Text("Dark Theme"),
+                            onTap: ()=>{
+                              Get.changeTheme(ThemeData.dark())
+                            },
+                          )
+                        ],
+                      ),
+                    ),
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      side: BorderSide(
+                        color: Colors.white,
+                      )
+                    )
+                  );
+                },
+                child: Text("BottomSheet")
+            )
           ],
         ),
       ),
