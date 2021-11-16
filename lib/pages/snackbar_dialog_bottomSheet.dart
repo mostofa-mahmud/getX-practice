@@ -109,7 +109,17 @@ class Snackbar_dialog_bottomSheet extends StatelessWidget {
                   );
                 },
                 child: Text("NextPage")
+            ),
+
+
+            ElevatedButton(
+                onPressed: ()async{
+                  var data = await Get.to(thenextPage());
+                  print(" received $data");
+                },
+                child: Text("data")
             )
+
 
           ],
         ),

@@ -12,7 +12,7 @@ class thenextPage extends StatelessWidget {
           children: [
             ElevatedButton(
                 onPressed: (){
-                  Get.back();
+                  Get.back(result: "10");
                 },
                 child: Text("Back to HomePage")
             ),
