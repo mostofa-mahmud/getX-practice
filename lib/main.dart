@@ -13,6 +13,16 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+
+      initialRoute: "/",
+      defaultTransition: Transition.zoom,
+
+      getPages: [
+        GetPage(name: "/", page: ()=> Routes()),
+        GetPage(name: "/nextPage", page: ()=> thenextPage(),
+            transition: Transition.leftToRight
+        )
+      ],
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -25,7 +35,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Snackbar_dialog_bottomSheet(),
+      //home: Snackbar_dialog_bottomSheet(),
     );
   }
 }

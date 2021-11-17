@@ -8,7 +8,7 @@ class Snackbar_dialog_bottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SnackBar and Dialog"),
+        title: Text("SnackBar, Dialog, bottomSheet"),
       ),
       body: Center(
         child: Column(

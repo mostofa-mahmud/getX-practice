@@ -5,3 +5,4 @@ import 'package:get/get.dart';
 
 part 'snackbar_dialog_bottomSheet.dart';
 part 'thenextPage.dart';
+part 'routes.dart';
